@@ -1,0 +1,25 @@
+{
+  "name": "S3 Get/Put example",
+  "description": "Task inputs and outputs can be Cloud Storage URLs.",
+  "executors": [
+    {
+      "image": "ubuntu",
+      "command": ["sh","-c","md5sum /tmp/inputfile > /tmp/md5sum.txt"]
+    }
+  ],
+  "inputs": [
+    {
+      "name": "input",
+      "description": "Download a public file from S3 Storage (IRS form 990 data)",
+      "url": "s3://angelfiles/test.bam",
+      "path": "/tmp/inputfile"
+    }
+    ],
+    "outputs": [
+      {
+        "name": "checksum",
+        "url": "s3://cromwell-aws-batch/funnel/results/md5sum.txt",
+        "path": "/tmp/md5sum.txt"
+      }
+    ]
+}
