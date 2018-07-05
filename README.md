@@ -126,14 +126,14 @@ $ aws batch describe-jobs --jobs "b9d25ef9-ddb8-40fb-aaf1-65c4b72113b4"
         {
             "jobName": "task-runner-test",
             "jobId": "b9d25ef9-ddb8-40fb-aaf1-65c4b72113b4",
-            "jobQueue": "arn:aws:batch:us-east-1:798375407761:job-queue/testNewQueue",
+            "jobQueue": "arn:aws:batch:us-east-1:123412341234:job-queue/testNewQueue",
             "status": "SUCCEEDED",
             "attempts": [ #...   ],
             "statusReason": "Essential container in task exited",
             # ... more output ...
                 "exitCode": 0,
-                "containerInstanceArn": "arn:aws:ecs:us-east-1:798375407761:container-instance/d20c0229-2d4c-46ca-b7f4-dd6701105803",
-                "taskArn": "arn:aws:ecs:us-east-1:798375407761:task/00c4a49e-da3c-48b7-88ed-6ca389ad7e01",
+                "containerInstanceArn": "arn:aws:ecs:us-east-1:123412341234:container-instance/d20c0229-2d4c-46ca-b7f4-dd6701105803",
+                "taskArn": "arn:aws:ecs:us-east-1:123412341234:task/00c4a49e-da3c-48b7-88ed-6ca389ad7e01",
                 "logStreamName": "TaskRunner/default/00c4a49e-da3c-48b7-88ed-6ca389ad7e01"
             }
         }
